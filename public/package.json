@@ -1,0 +1,74 @@
+{
+    "name": "demo",
+    "productName": "项目名称",
+    "author": "作者",
+    "version": "1.0.0",
+    "main": "main.js",
+    "description": "项目描述",
+    "scripts": {
+        "build": "electron-builder",
+        "start": "electron ."
+    },
+    "build": {
+        "appId": "com.electron.desktop",
+        "productName": "electron",
+        "asar": true,
+        "copyright": "Copyright © 2022 electron",
+        "directories": {
+            "output": "release/"
+        },
+        "files": [
+            "dist"
+        ],
+        "mac": {
+            "artifactName": "${productName}_${version}.${ext}",
+            "target": [
+                "dmg"
+            ]
+        },
+        "win": {
+            "target": [
+                {
+                    "target": "nsis",
+                    "arch": [
+                        "x64"
+                    ]
+                }
+            ],
+            "artifactName": "${productName}_${version}.${ext}"
+        },
+        "nsis": {
+            "oneClick": false,
+            "allowElevation": true,
+            "allowToChangeInstallationDirectory": true,
+            "installerIcon": "vite.ico",
+            "uninstallerIcon": "vite.ico",
+            "installerHeader": "vite.ico",
+            "installerHeaderIcon": "vite.ico",
+            "installerSidebar": "public/installerSiddebar.bmp",
+            "uninstallerSidebar": "public/uninstallerSiddebar.bmp",
+            "uninstallDisplayName": "${productName}${version}",
+            "createDesktopShortcut": true,
+            "createStartMenuShortcut": true,
+            "shortcutName": "SHom",
+            "include": "script/installer.nsi",
+            "script": "script/installer.nsi",
+            "deleteAppDataOnUninstall": false,
+            "runAfterFinish": true,
+            "menuCategory": false
+        },
+        "publish": [
+            {
+                "provider": "generic",
+                "url": "http://127.0.0.1:8080"
+            }
+        ],
+        "releaseInfo": {
+            "releaseNotes": "版本更新的具体内容"
+        }
+    },
+    "devDependencies": {
+        "electron": "^20.0.1",
+        "electron-builder": "^23.6.0"
+    }
+}

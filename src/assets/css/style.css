@@ -1,0 +1,39 @@
+@import "./reset.css";
+@import "./theme.css";
+
+:root {
+  --max-container-width: 40rem;
+  --max-container-height: 40rem;
+
+  --app-background-color: #fff;
+  --beans-color: orange;
+  --snakeBody-color: blue;
+  --snakeHead-color: red;
+  --cell-border-color: #ffcc80;
+
+  --themeSwicth-btn: #fff;
+  --themeSwitch-background-color: #f1f1f1;
+  --themeSwitch-border-color: rgba(60, 60, 60, 0.29);
+  --themeSwitch-border-color_hover: #8e8e8e;
+  --themeSwitch-background-image: url("@/assets/imgs/svg/太阳.svg");
+
+  --dialog-background-color: #fff;
+  --dialog-header-font-color: #333;
+  --dialog-header-font-color-lose: #fa1b1b;
+  --dialog-main-border-color: #e6e6e6;
+  --dialog-main-font-color: #4b4b4b;
+  --dialog-footer-font-color-lose: #fa1b1b;
+  --dialog-footer-successBtn-background-color: #fa1b1b;
+  --dialog-footer-btn-background-color_active: #e7e7e7;
+
+  --slider-height: 0.5rem;
+}
+
+#app {
+  height: 100vh;
+  overflow: hidden scroll;
+  position: relative;
+  background-color: var(--app-background-color);
+  transition: all 0.5s;
+  user-select: none;
+}

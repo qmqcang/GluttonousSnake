@@ -1,0 +1,19 @@
+html.dark {
+  --beans-color: orange;
+  --snakeBody-color: blue;
+  --snakeHead-color: red;
+  --app-background-color: #1a1a1a;
+  --cell-border-color: #00be0a;
+
+  --themeSwicth-btn: #1a1a1a;
+  --themeSwitch-border-color: rgba(84, 84, 84, 0.65);
+  --themeSwitch-background-color: #2f2f2f;
+  --themeSwitch-background-image: url("@/assets/imgs/svg/月亮.svg");
+
+  --dialog-background-color: #353535;
+  --dialog-main-border-color: #858585;
+  --dialog-header-font-color: #fff;
+  --dialog-main-font-color: #fff;
+  --dialog-footer-font-color: #fff;
+  --dialog-footer-btn-background-color_active: #3f3f3f;
+}
